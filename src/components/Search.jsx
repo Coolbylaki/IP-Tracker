@@ -16,8 +16,16 @@ const Search = (props) => {
 
 			setLocation(data);
 
-			const coords = [data.location.lat, data.location.lng];
-			props.locationHandler(coords);
+			const locationData = {
+				coords: [data.location.lat, data.location.lng],
+				IP,
+				location: data.location.city,
+				country: data.location.country,
+				zip: data.location.postalCode ? data.location.postalCode : "",
+				isp: data.isp,
+			};
+
+			props.locationHandler(locationData);
 		} catch (e) {
 			throw new Error("Sorry we could not get a response!");
 		}

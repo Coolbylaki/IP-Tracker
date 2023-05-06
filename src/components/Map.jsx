@@ -7,12 +7,12 @@ const Map = (props) => {
 	useEffect(() => {
 		if (mapRef.current) {
 			const map = mapRef.current;
-			map.setView(props.coords, map.getZoom());
+			map.setView(props.coords, 13);
 		}
 	}, [props.coords]);
 
 	return (
-		<MapContainer ref={mapRef} center={props.coords} zoom={13} scrollWheelZoom={true} className="h-[65%] w-screen">
+		<MapContainer ref={mapRef} center={props.coords} zoom={10} scrollWheelZoom={true} className="h-[65%] w-screen">
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

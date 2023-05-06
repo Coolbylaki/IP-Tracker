@@ -5,10 +5,14 @@ import { useState } from "react";
 
 function App() {
 	const [coordinates, setCoordinates] = useState([51.505, -0.09]);
+	const [locationData, setLocationData] = useState({});
 
 	const locationDataHandler = (locationData) => {
-		setCoordinates(locationData);
+		setCoordinates(locationData.coords);
+		setLocationData(locationData);
 	};
+
+	console.log(locationData);
 
 	return (
 		<>
