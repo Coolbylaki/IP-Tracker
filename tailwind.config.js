@@ -11,8 +11,8 @@ export default {
 				18: "18px",
 			},
 			backgroundImage: {
-				"mobile-pattern": "url('./src/assets/images/pattern-bg-mobile.png')",
-				"desktop-pattern": "url('./src/assets/images/pattern-bg-desktop.png')",
+				"mobile-pattern": "url('/images/pattern-bg-mobile.png')",
+				"desktop-pattern": "url('/images/pattern-bg-desktop.png')",
 			},
 		},
 		fontFamily: {

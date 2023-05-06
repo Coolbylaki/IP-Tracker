@@ -1,5 +1,5 @@
 import { useState } from "react";
-import arrowSvg from "../assets/images/icon-arrow.svg";
+import arrowSvg from "/images/icon-arrow.svg";
 
 const Search = (props) => {
 	const [location, setLocation] = useState({});
