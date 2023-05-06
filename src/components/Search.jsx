@@ -10,7 +10,9 @@ const Search = (props) => {
 		const API = import.meta.env.VITE_IP_GEOLOCATION;
 
 		try {
-			const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${API}&ipAddress=${IP}`);
+			const response = await fetch(
+				`https://geo.ipify.org/api/v2/country,city?apiKey=at_Do6EZ2bNCS64daRUr3Kl4TK9oHFFd&ipAddress=${IP}`
+			);
 
 			const data = await response.json();
 
