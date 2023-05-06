@@ -14,11 +14,11 @@ function App() {
 
 	return (
 		<>
-			<section className="bg-mobile-pattern bg-cover px-6 h-[35%]">
+			<section className="bg-mobile-pattern bg-cover px-6 h-[35%] relative">
 				<h1 className="text-2xl text-white font-medium text-center py-7">IP Address Tracker</h1>
 				<Search locationHandler={locationDataHandler} />
+				<Display location={locationData} />
 			</section>
-			<Display location={locationData} />
 			<Map coords={coordinates} />
 		</>
 	);
