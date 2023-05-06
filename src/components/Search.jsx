@@ -25,7 +25,7 @@ const Search = () => {
 			<form className="flex" onSubmit={onSubmitHandler}>
 				<input
 					type="text"
-					placeholder="Search for any IP address or domain"
+					placeholder="Search for any IP address"
 					className="py-4 rounded-l-xl pl-5 w-full placeholder:text-sm text-18 shadow"
 				/>
 				<button type="submit" className="bg-black rounded-r-xl p-5">
