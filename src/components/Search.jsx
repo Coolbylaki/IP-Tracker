@@ -21,10 +21,10 @@ const Search = (props) => {
 				IP,
 				location: data.location.city,
 				country: data.location.country,
-				zip: data.location.postalCode ? data.location.postalCode : "",
+				zip: data.location.postalCode,
 				isp: data.isp,
+				timezone: data.location.timezone,
 			};
-
 			props.locationHandler(locationData);
 		} catch (e) {
 			throw new Error("Sorry we could not get a response!");

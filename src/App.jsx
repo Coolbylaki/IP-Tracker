@@ -12,14 +12,13 @@ function App() {
 		setLocationData(locationData);
 	};
 
-	console.log(locationData);
-
 	return (
 		<>
 			<section className="bg-mobile-pattern bg-cover px-6 h-[35%]">
 				<h1 className="text-2xl text-white font-medium text-center py-7">IP Address Tracker</h1>
 				<Search locationHandler={locationDataHandler} />
 			</section>
+			<Display location={locationData} />
 			<Map coords={coordinates} />
 		</>
 	);
