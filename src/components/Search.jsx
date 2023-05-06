@@ -1,7 +1,7 @@
 import { useState } from "react";
 import arrowSvg from "../assets/images/icon-arrow.svg";
 
-const Search = () => {
+const Search = (props) => {
 	const [location, setLocation] = useState({});
 
 	const onSubmitHandler = async (e) => {
@@ -15,6 +15,9 @@ const Search = () => {
 			const data = await response.json();
 
 			setLocation(data);
+
+			const coords = [data.location.lat, data.location.lng];
+			props.locationHandler(coords);
 		} catch (e) {
 			throw new Error("Sorry we could not get a response!");
 		}

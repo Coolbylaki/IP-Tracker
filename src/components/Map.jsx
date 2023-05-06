@@ -1,13 +1,23 @@
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { useRef, useEffect } from "react";
 
-const Map = () => {
+const Map = (props) => {
+	const mapRef = useRef(null);
+
+	useEffect(() => {
+		if (mapRef.current) {
+			const map = mapRef.current;
+			map.setView(props.coords, map.getZoom());
+		}
+	}, [props.coords]);
+
 	return (
-		<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className="h-[65%] w-screen">
+		<MapContainer ref={mapRef} center={props.coords} zoom={13} scrollWheelZoom={true} className="h-[65%] w-screen">
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 			/>
-			<Marker position={[51.505, -0.09]} />
+			<Marker position={props.coords} />
 		</MapContainer>
 	);
 };
