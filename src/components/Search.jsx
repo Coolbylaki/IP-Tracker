@@ -43,7 +43,7 @@ const Search = (props) => {
 					<img src={arrowSvg} alt="confirm button" />
 				</button>
 			</form>
-			{location.code === 422 && <p className="text-center py-5 text-xl text-white">{location.messages}</p>}
+			{location.code === 422 && <p className="text-center pt-5 text-xl text-white font-bold">{location.messages}</p>}
 		</>
 	);
 };

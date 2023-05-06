@@ -14,10 +14,10 @@ function App() {
 
 	return (
 		<>
-			<section className="bg-mobile-pattern bg-cover px-6 h-[35%] relative">
+			<section className="bg-mobile-pattern bg-cover px-6 h-[35%]">
 				<h1 className="text-2xl text-white font-medium text-center py-7">IP Address Tracker</h1>
 				<Search locationHandler={locationDataHandler} />
-				<Display location={locationData} />
+				{locationData.IP && <Display location={locationData} />}
 			</section>
 			<Map coords={coordinates} />
 		</>
