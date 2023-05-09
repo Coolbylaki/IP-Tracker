@@ -14,7 +14,7 @@ function App() {
 
 	return (
 		<>
-			<section className="bg-mobile-pattern bg-cover px-6 h-[35%]">
+			<section className="bg-mobile-pattern md:bg-desktop-pattern bg-cover px-6 h-[35%]">
 				<h1 className="text-2xl text-white font-medium text-center py-7 md:text-3xl">IP Address Tracker</h1>
 				<Search locationHandler={locationDataHandler} />
 				{locationData.IP && <Display location={locationData} />}
