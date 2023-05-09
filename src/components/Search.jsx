@@ -35,11 +35,11 @@ const Search = (props) => {
 
 	return (
 		<>
-			<form className="flex" onSubmit={onSubmitHandler}>
+			<form className="flex justify-center" onSubmit={onSubmitHandler}>
 				<input
 					type="text"
 					placeholder="Search for any IP address"
-					className="py-4 rounded-l-xl pl-5 w-full placeholder:text-sm text-18 shadow cursor-pointer"
+					className="py-4 rounded-l-xl pl-5 w-full placeholder:text-sm text-18 shadow cursor-pointer md:max-w-xl"
 				/>
 				<button type="submit" className="bg-black rounded-r-xl p-5 hover:bg-veryDarkGray">
 					<img src={arrowSvg} alt="confirm button" />
