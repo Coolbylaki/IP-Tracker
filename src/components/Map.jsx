@@ -1,5 +1,10 @@
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { useRef, useEffect } from "react";
+import L from "leaflet";
+
+const locationIcon = L.icon({
+	iconUrl: "src/assets/icon-location.svg",
+});
 
 const Map = (props) => {
 	const mapRef = useRef(null);
@@ -27,7 +32,7 @@ const Map = (props) => {
 				id="mapbox/streets-v11"
 			/>
 
-			<Marker position={props.coords} />
+			<Marker position={props.coords} icon={locationIcon} />
 		</MapContainer>
 	);
 };

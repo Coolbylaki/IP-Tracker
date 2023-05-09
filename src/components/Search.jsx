@@ -39,9 +39,9 @@ const Search = (props) => {
 				<input
 					type="text"
 					placeholder="Search for any IP address"
-					className="py-4 rounded-l-xl pl-5 w-full placeholder:text-sm text-18 shadow"
+					className="py-4 rounded-l-xl pl-5 w-full placeholder:text-sm text-18 shadow cursor-pointer"
 				/>
-				<button type="submit" className="bg-black rounded-r-xl p-5">
+				<button type="submit" className="bg-black rounded-r-xl p-5 hover:bg-veryDarkGray">
 					<img src={arrowSvg} alt="confirm button" />
 				</button>
 			</form>
