@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import L from "leaflet";
 
 const locationIcon = L.icon({
-	iconUrl: "src/assets/icon-location.svg",
+	iconUrl: "/images/icon-location.svg",
 });
 
 const Map = (props) => {
